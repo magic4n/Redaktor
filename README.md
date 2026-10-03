@@ -4,6 +4,8 @@
 
 English | [Русский](./README.ru.md)
 
+[Latest version here: redaktor.luna-app.space](https://redaktor.luna-app.space)
+
 ## ✨ Features
 
 - 🌍 **Fully Local** — everything runs in the browser, data never leaves your device
