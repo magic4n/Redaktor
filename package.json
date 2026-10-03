@@ -1,0 +1,44 @@
+{
+  "name": "redaktor",
+  "version": "1.0.0",
+  "description": "Swiss-army knife for text, CSV, JSON, and structured data. 100% local, no server, no telemetry.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5",
+    "i18next": "^23.8.0",
+    "react-i18next": "^14.1.0",
+    "lucide-react": "^0.383.0",
+    "react-window": "^1.8.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20.11.5",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.11",
+    "typescript": "^5.3.3",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.1.1",
+    "vitest": "^1.1.0",
+    "@vitest/ui": "^1.1.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@playwright/test": "^1.41.1"
+  }
+}

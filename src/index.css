@@ -1,0 +1,143 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  /* Material You 3 - Medical Blue (#0061A4) */
+  --md-sys-color-primary: #0061a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d4e4ff;
+  --md-sys-color-on-primary-container: #001d3b;
+  
+  --md-sys-color-secondary: #555f71;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #dce4f9;
+  --md-sys-color-on-secondary-container: #11192b;
+  
+  --md-sys-color-tertiary: #70578e;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #eaddff;
+  --md-sys-color-on-tertiary-container: #27004b;
+  
+  --md-sys-color-error: #b3261e;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #f9dedc;
+  --md-sys-color-on-error-container: #410e0b;
+  
+  --md-sys-color-background: #fffbfe;
+  --md-sys-color-on-background: #1c1b1f;
+  --md-sys-color-surface: #fffbfe;
+  --md-sys-color-on-surface: #1c1b1f;
+  --md-sys-color-surface-variant: #e7e0ec;
+  --md-sys-color-on-surface-variant: #49454f;
+  
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac7d0;
+  
+  --ripple-opacity: 0.12;
+  --animation-duration-short: 200ms;
+  --animation-duration-medium: 300ms;
+  --animation-easing-standard: cubic-bezier(0.2, 0, 0.8, 1);
+  --animation-easing-emphasized: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #afc7ff;
+    --md-sys-color-on-primary: #002959;
+    --md-sys-color-primary-container: #004a7c;
+    --md-sys-color-on-primary-container: #d4e4ff;
+    
+    --md-sys-color-secondary: #bfc8dc;
+    --md-sys-color-on-secondary: #252d3f;
+    --md-sys-color-secondary-container: #3d4556;
+    --md-sys-color-on-secondary-container: #dce4f9;
+    
+    --md-sys-color-tertiary: #d0bcff;
+    --md-sys-color-on-tertiary: #3e2d63;
+    --md-sys-color-tertiary-container: #57407b;
+    --md-sys-color-on-tertiary-container: #eaddff;
+    
+    --md-sys-color-error: #f2b8b5;
+    --md-sys-color-on-error: #601410;
+    --md-sys-color-error-container: #8c1d18;
+    --md-sys-color-on-error-container: #f9dedc;
+    
+    --md-sys-color-background: #1c1b1f;
+    --md-sys-color-on-background: #e6e1e6;
+    --md-sys-color-surface: #1c1b1f;
+    --md-sys-color-on-surface: #e6e1e6;
+    --md-sys-color-surface-variant: #49454f;
+    --md-sys-color-on-surface-variant: #cac7d0;
+    
+    --md-sys-color-outline: #96919b;
+    --md-sys-color-outline-variant: #49454f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Roboto Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* M3 Ripple effect */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  opacity: var(--ripple-opacity);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-outline);
+}
+
+/* Input styling */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
